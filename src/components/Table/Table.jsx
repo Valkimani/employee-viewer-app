@@ -78,8 +78,6 @@ const Table = () => {
             <td>theo.duval@example.com</td>
             <td>01-79-10-63-52</td>
             <td>t1990-06-10T10:51:10.540Z</td>
-            
-
           </tr>
          
         </tbody>
