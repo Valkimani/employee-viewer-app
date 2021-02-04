@@ -71,14 +71,18 @@ const Table = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1NNaN50042736 92</th>
-            <td><img src="https://randomuser.me/api/portraits/thumb/men/58.jpg" alt=""/></td>
-            <td>Theo Duval</td>
-            <td>theo.duval@example.com</td>
-            <td>01-79-10-63-52</td>
-            <td>t1990-06-10T10:51:10.540Z</td>
-          </tr>
+         {users.map((user) =>(
+          //  for every user in the user array, I render a table row.
+//  * Addded jsx expressions to be able to add values */
+<tr>
+<th scope="row">{user.id.value}</th>
+<td><img src={user.picture.thumbnail}></img></td>
+<td>{user.name.first} {user.name.last}</td>
+<td>{user.email}</td>
+<td>{user.phone}</td>
+<td>{user.dob.date}</td>
+</tr>
+         ))}
          
         </tbody>
       </table>
