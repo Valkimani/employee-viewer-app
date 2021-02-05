@@ -29,8 +29,8 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
 
   const sortByName = ()=> {
     // sorting an array of objects
-    let tempUsers = [...users];
-    tempUsers.sort((a,b) => {
+    const tempUsers = [...users];
+   const sortedUsers= tempUsers.sort((a,b) => {
       const aValue = a.name.first;
       const bValue = a.name.first;
 
@@ -41,8 +41,8 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
       return 0;
     }
     );
-    console.log(tempUsers)
-    setUsersToDisplay(tempUsers);
+    console.log(sortedUsers)
+    setUsersToDisplay(sortedUsers);
 
   }
     return (
@@ -58,11 +58,10 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
           </tr>
         </thead>
         <tbody>
-         {usersToDisplay.map((user) =>(
+         {usersToDisplay.map((user, index) =>(
           //  for every user in the user array, I render a table row.
 //  * Below, addded jsx expressions to be able to add values */
-<tr key={user.id.value}>
-  
+<tr key={index}>
 <th scope="row">{user.id.value}</th>
 <td><img src={user.picture.thumbnail} alt={user.name.first}></img></td>
 <td>{user.name.first} {user.name.last}</td>
