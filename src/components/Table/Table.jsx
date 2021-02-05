@@ -28,9 +28,9 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
   // Added a function to sort by name. This should execute when name in the column heading is clicked.
 
   const sortByName = ()=> {
-
     // sorting an array of objects
-    const sortedUsers = users.sort((a,b) => {
+    let tempUsers = [...users];
+    tempUsers.sort((a,b) => {
       const aValue = a.name.first;
       const bValue = a.name.first;
 
@@ -41,8 +41,8 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
       return 0;
     }
     );
-    console.log(sortedUsers)
-    setUsersToDisplay(sortedUsers);
+    console.log(tempUsers)
+    setUsersToDisplay(tempUsers);
 
   }
     return (
