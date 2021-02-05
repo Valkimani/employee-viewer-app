@@ -8,7 +8,7 @@ const Table = () => {
     // Took out hard coded values and left an empty array. Added useEffect then imported axios
   ]);
 
-  // useEffect call back function when the component mounts. Call axios.get and parse in multiple users. Added .then which returns a response
+  // useEffect call back function when the componentDid mount. Call axios.get and parse in multiple users. Added .then which returns a response
   useEffect(() =>{
 axios.get("https://randomuser.me/api/?results=50").then(response => {
   console.log(response.data)
@@ -16,6 +16,7 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
   setUsers(response.data.results);
 
 })
+// An empty dependency array inside useEffect, mimics componentDid mount to prevent repeated calls
   }, []); 
     return (
         <table className="table table-striped">
