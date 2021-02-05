@@ -3,6 +3,7 @@ import Table from "./components/Table/Table";
 
 
 
+
 const App = () => {
   return (
     <div className="container">
@@ -10,6 +11,7 @@ const App = () => {
         <div className="col">
           <Header />
           <Table />
+        
 
         </div>
       </div>

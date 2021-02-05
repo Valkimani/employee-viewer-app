@@ -3,12 +3,12 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div>
-              <header className="header"></header>
-            <h1>Employee Viewer</h1>
-            <p>Use the search box to narrow your search</p>
-        </div>
+      <header>
+        <h1 className="text-center">Employee Directory</h1>
+        <p className="text-center">
+          Use the search box to narrow your search.
+        </p>
+      </header>
     );
-};
-
+  };
 export default Header;

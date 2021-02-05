@@ -1,5 +1,8 @@
 .header,p{
     text-align: center;
-    background-color: rgb(29, 29, 102);
+    background-color: #151b1543;
+    color: white;
+    border-bottom: 5px solid #c52d3c;
+    padding: 25px;
 
 }
