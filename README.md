@@ -2,7 +2,7 @@
 
 ## Description
 
-This assignment demonstrates creating an employee directory with React. To achieve this, the application's UI has been broken down into components, manage component state, and respond to user events.  when the user loads the page, a table of employees should render. The user should be able to:
+This assignment demonstrates creating an employee directory with React. To achieve this, the application's UI has been broken down into components, manage component state, and respond to user events. When the user loads the page, a table of employees should render. The user should be able to:
 
   * Sort the table by at least one category
 
@@ -13,15 +13,21 @@ This assignment demonstrates creating an employee directory with React. To achie
 
 * As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
-## Screenshots
+## Screenshot
+![NoteTaker](./public/images/)
+![AddNote](./public/images/)
 
 ## links
+
+[Heroku Guide]()
+[Github]()
+
 
 ## Resources
 
  [Random User API](https://randomuser.me/).
 # License
-opyright (c) [2021] [Valentine Kimani]
+Copyright (c) [2021] [Valentine Kimani]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

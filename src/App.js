@@ -1,5 +1,7 @@
 import Header from "./components/Header/Header";
+import SearchBar from "./components/SearchBar/Searchbar";
 import Table from "./components/Table/Table";
+
 
 
 
@@ -10,9 +12,8 @@ const App = () => {
       <div className="row">
         <div className="col">
           <Header />
-          <Table />
-        
-
+          <SearchBar />
+         <Table />
         </div>
       </div>
     </div>
