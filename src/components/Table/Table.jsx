@@ -1,6 +1,6 @@
 import React ,{useEffect, useState} from 'react';
 import axios from "axios";
-import { response } from 'express';
+
 
 const Table = () => {
 
@@ -12,6 +12,8 @@ const Table = () => {
   useEffect(() =>{
 axios.get("https://randomuser.me/api/?results=50").then(response => {
   console.log(response.data)
+  // set the response on state
+  setUsers(response.data.results);
 
 })
   }, []); 
