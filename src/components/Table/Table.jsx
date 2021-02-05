@@ -43,7 +43,7 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
 <tr>
   
 <th scope="row">{user.id.value}</th>
-<td><img src={user.picture.thumbnail}></img></td>
+<td><img src={user.picture.thumbnail} alt={user.name.first}></img></td>
 <td>{user.name.first} {user.name.last}</td>
 <td>{user.email}</td>
 <td>{user.phone}</td>
