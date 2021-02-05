@@ -18,6 +18,12 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
 })
 // An empty dependency array inside useEffect, mimics componentDid mount to prevent repeated calls
   }, []); 
+
+  // Added a function to sort by name. This should execute when name in the column heading is clicked.
+
+  const sortByName = ()=> {
+
+  }
     return (
         <table className="table table-striped">
         <thead>
@@ -25,7 +31,7 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
             <th scope="col">#ID</th>
             <th scope="col">Photo</th>
             <th scope="col">Name</th>
-            <th scope="col">Email</th>
+            <th scope="col" onClick={sortByName}>Email</th>
             <th scope="col">Phone</th>
             <th scope="col">DOB</th>
           </tr>
