@@ -1,13 +1,20 @@
 import React ,{useEffect, useState} from 'react';
-import axios from "axios"
+import axios from "axios";
+import { response } from 'express';
 
 const Table = () => {
 
   const [users, setUsers]= useState([
-    // Took out hard coded values and added useeffect and imported axios
-  ]
+    // Took out hard coded values and left an empty array. Added useEffect then imported axios
+  ]);
 
-  )
+  // useEffect call back function when the component mounts. Call axios.get and parse in multiple users. Added .then which returns a response
+  useEffect(() =>{
+axios.get("https://randomuser.me/api/?results=50").then(response => {
+  console.log(response.data)
+
+})
+  }, []); 
     return (
         <table className="table table-striped">
         <thead>
