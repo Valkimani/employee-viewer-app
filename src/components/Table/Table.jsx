@@ -9,19 +9,27 @@ const Table = () => {
   ]);
 
   // useEffect call back function when the componentDid mount. Call axios.get and parse in multiple users. Added .then which returns a response
+
+  // Added usersToDisplay to display the changes on the browser.after making the api call, the users will be stored in the setUsersDisplay and setUsers
+  const [usersToDisplay, setUsersToDisplay]= useState([]);
+
   useEffect(() =>{
 axios.get("https://randomuser.me/api/?results=50").then(response => {
   console.log(response.data)
   // set the response on state
+  setUsersToDisplay(response.data.results);
   setUsers(response.data.results);
+  
 
-})
+});
 // An empty dependency array inside useEffect, mimics componentDid mount to prevent repeated calls
   }, []); 
 
   // Added a function to sort by name. This should execute when name in the column heading is clicked.
 
   const sortByName = ()=> {
+
+    // sorting an array of objects
     const sortedUsers = users.sort((a,b) => {
       const aValue = a.name.first;
       const bValue = a.name.first;
@@ -34,6 +42,7 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
     }
     );
     console.log(sortedUsers)
+    setUsersToDisplay(sortedUsers);
 
   }
     return (
@@ -49,7 +58,7 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
           </tr>
         </thead>
         <tbody>
-         {users.map((user) =>(
+         {usersToDisplay.map((user) =>(
           //  for every user in the user array, I render a table row.
 //  * Below, addded jsx expressions to be able to add values */
 <tr key={user.id.value}>
