@@ -14,13 +14,13 @@ This assignment demonstrates creating an employee directory with React. To achie
 * As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
 
 ## Screenshot
-![NoteTaker](./public/images/)
-![AddNote](./public/images/)
+![EmployeeViewer](./public/images/EmployeeViewer.png)
+
 
 ## links
 
 [Heroku Guide]()
-[Github]()
+[Github](https://github.com/Valkimani/employee-viewer-app)
 
 
 ## Resources
