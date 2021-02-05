@@ -22,6 +22,18 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
   // Added a function to sort by name. This should execute when name in the column heading is clicked.
 
   const sortByName = ()=> {
+    const sortedUsers = users.sort((a,b) => {
+      const aValue = a.name.first;
+      const bValue = a.name.first;
+
+      if (aValue < bValue){
+        return 1;
+      
+      }
+      return 0;
+    }
+    );
+    console.log(sortedUsers)
 
   }
     return (
@@ -40,7 +52,7 @@ axios.get("https://randomuser.me/api/?results=50").then(response => {
          {users.map((user) =>(
           //  for every user in the user array, I render a table row.
 //  * Below, addded jsx expressions to be able to add values */
-<tr>
+<tr key={user.id.value}>
   
 <th scope="row">{user.id.value}</th>
 <td><img src={user.picture.thumbnail} alt={user.name.first}></img></td>
